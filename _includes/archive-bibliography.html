@@ -1,0 +1,12 @@
+{% include base_path %}
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <li>
+      {{ post.citation }}
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i></a>
+      {% endif %}
+    </li>
+  </article>
+</div>

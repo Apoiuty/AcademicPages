@@ -11,26 +11,24 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Computer Science and Technology, National University of Defense Technology, 2023 - 2026 (expected)
+* M.S. in Electronic Information, National University of Defense Technology, 2020 - 2022
+* B.S. in Mechatronic Engineering, Northwestern Polytechnical University, 2016 - 2020
 
-Work experience
+Honors and Awards
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+*   **University-level Outstanding Student**, National University of Defense Technology, 2025
+*   **Second-class Academic Scholarship**, National University of Defense Technology, 2025
+*   **College-level Outstanding Student**, College of Computer, National University of Defense Technology, 2025
+*   **National Scholarship**, Northwestern Polytechnical University, 2017
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+Academic Activities
+======
+*   **Conference Presentation**, The 1st National Conference on Intelligent Fluid Mechanics, 2024
+*   **Conference Presentation**, The 2023 National Workshop on Mesh Generation and Applications (MEGAS 2023), 2023
+*   **Conference Attendance**, The 2nd Chinese Conference of Aerodynamics, 2023
+*   **Journal Reviewer** for *Aerospace Science and Technology*, *Computer Methods in Applied Mechanics and Engineering*, *Engineering Applications of Artificial Intelligence*, and *Neural Networks*
+*   **Teaching Assistant**, *University Computing* course, 2024 & 2025
   
 Skills
 ======
@@ -61,4 +59,5 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+*   **Journal Reviewer** for multiple top-tier journals (AST, CMAME, EAAI, Neural Networks).
+*   **Course Teaching Assistant** at National University of Defense Technology.

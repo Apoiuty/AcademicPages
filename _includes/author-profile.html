@@ -170,6 +170,9 @@
       {% endif %}
       {% if author.zhihu %}
       <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
+      {% endif %}
+      {% if author.douban %}
+        <li><a href="{{ author.douban }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>Douban</a></li>
       {% endif %}      
     </ul>
   </div>
