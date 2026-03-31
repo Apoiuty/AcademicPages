@@ -34,8 +34,8 @@ My research explores how Graph Neural Networks (GNNs), Reinforcement Learning (R
 </ul>
 
 ## Academic Activities
-*   **Conference Presentation**, The 1st National Conference on Intelligent Fluid Mechanics, 2024
-*   **Conference Presentation**, The 2023 National Workshop on Mesh Generation and Applications (MEGAS 2023), 2023
-*   **Conference Attendance**, The 2nd Chinese Conference of Aerodynamics, 2023
-*   **Journal Reviewer** for *Aerospace Science and Technology*, *Computer Methods in Applied Mechanics and Engineering*, *Engineering Applications of Artificial Intelligence*, and *Neural Networks*
-*   **Teaching Assistant**, *University Computing* course, 2024 & 2025
+*   **Conferences**:
+    *   **Presentation**: The 1st National Conference on Intelligent Fluid Mechanics (2024); The 2023 National Workshop on Mesh Generation and Applications (MEGAS 2023)
+    *   **Attendance**: The 2nd Chinese Conference of Aerodynamics (2023)
+*   **Journal Reviewer**: *Aerospace Science and Technology*, *Computer Methods in Applied Mechanics and Engineering*, *Engineering Applications of Artificial Intelligence*, and *Neural Networks*
+*   **Teaching Assistant**: *University Computing* course, 2024 & 2025
