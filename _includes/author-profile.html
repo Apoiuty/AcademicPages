@@ -22,6 +22,15 @@
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    <div class="author__motto" title="Jean-Paul Sartre: L'existence précède l'essence">
+      <i class="fas fa-quote-left motto-icon-sm" aria-hidden="true"></i>
+      {% if page.url contains '/zh/' %}
+        <span>存在先于本质</span>
+      {% else %}
+        <span>Existence precedes essence</span>
+      {% endif %}
+      <i class="fas fa-quote-right motto-icon-sm" aria-hidden="true"></i>
+    </div>
   </div>
 
   <div class="author__urls-wrapper">
@@ -29,10 +38,10 @@
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+        <li class="author__desktop"><span class="author__static-item"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</span></li>
       {% endif %}
       {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+        <li class="author__desktop"><span class="author__static-item"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</span></li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>

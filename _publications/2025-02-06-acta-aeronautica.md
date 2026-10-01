@@ -11,9 +11,9 @@ citation: '<b>Wang Z</b>, Chen X, Deng L, et al. A surface mesh smoothing method
 
 ```bibtex
 @article{wang2025mesh,
-  title   = {基于无监督学习的飞行器表面网格平滑方法},
-  author  = {王志超 and 陈新海 and 邓亮 and 刘杨 and 庞宇飞 and 刘杰},
-  journal = {航空学报},
+  title   = {A surface mesh smoothing method for aircraft based on unsupervised learning},
+  author  = {Wang, Zhichao and Chen, Xinhai and Deng, Liang and Liu, Yang and Pang, Yufei and Liu, Jie},
+  journal = {Acta Aeronautica et Astronautica Sinica},
   year    = {2025},
   volume  = {46},
   number  = {10},

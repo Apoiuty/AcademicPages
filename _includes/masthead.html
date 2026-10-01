@@ -18,6 +18,13 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+          <li id="lang-switch" class="masthead__menu-item persist tail">
+            {% if page.url contains '/zh/' %}
+              <a href="{{ base_path }}/" title="Switch to English version" class="lang-toggle-btn"><i class="fas fa-globe"></i> EN</a>
+            {% else %}
+              <a href="{{ base_path }}/zh/" title="切换至中文主页" class="lang-toggle-btn"><i class="fas fa-language"></i> 中文</a>
+            {% endif %}
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>

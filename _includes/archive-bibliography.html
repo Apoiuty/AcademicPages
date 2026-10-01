@@ -20,17 +20,20 @@
     {% if post.citation contains "CCF-A" or post.venue contains "NeurIPS" %}
       <span class="pub-badge pub-badge-a">NeurIPS / CCF-A</span>
     {% endif %}
-    {% if post.citation contains "CCF-B" or post.citation contains "CAS Q2 Top" %}
-      <span class="pub-badge pub-badge-b">CCF-B / CAS Q2 Top</span>
+    {% if post.citation contains "CCF-B" %}
+      <span class="pub-badge pub-badge-b">CCF-B</span>
+    {% endif %}
+    {% if post.citation contains "CCF-C" %}
+      <span class="pub-badge pub-badge-prep">CCF-C</span>
     {% endif %}
     {% if post.citation contains "CAS Q1 Top" %}
       <span class="pub-badge pub-badge-top">CAS Q1 Top</span>
     {% endif %}
+    {% if post.citation contains "CAS Q2 Top" %}
+      <span class="pub-badge pub-badge-top">CAS Q2 Top</span>
+    {% endif %}
     {% if post.citation contains "Top Journal" and post.citation contains "Acta" %}
       <span class="pub-badge pub-badge-top">Top Aeronautical Journal</span>
-    {% endif %}
-    {% if post.citation contains "CCF-C" %}
-      <span class="pub-badge pub-badge-prep">CCF-C</span>
     {% endif %}
     {% if post.venue contains "arXiv" %}
       <span class="pub-badge pub-badge-prep">Preprint</span>

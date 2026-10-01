@@ -41,6 +41,7 @@
   --ac-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --ac-card-shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
   --ac-radius: 10px;
+  --ac-masthead-height: 52px;
 }
 
 /* Dark Theme Overrides */
@@ -133,10 +134,180 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(14px) !important;
   border-bottom: 1px solid var(--ac-border) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.masthead__inner-wrap {
+  padding: 0.35rem 1rem !important;
+  min-height: unset !important;
 }
 
 [data-theme="dark"] .masthead {
   background: rgba(15, 23, 42, 0.88) !important;
+}
+
+/* Page Layout Spacing & Vertical Alignment */
+body {
+  padding-top: 0 !important;
+}
+
+#main {
+  margin-top: 0 !important;
+  padding-top: 1.25rem !important;
+}
+
+.sidebar,
+.sidebar.sticky,
+.sidebar__right {
+  margin-top: 0 !important;
+}
+
+@media screen and (min-width: 64em) {
+  .sidebar,
+  .sidebar.sticky {
+    top: var(--ac-masthead-height) !important;
+    height: calc(100vh - var(--ac-masthead-height)) !important;
+    padding-top: 1.25rem !important;
+    overflow-y: auto !important;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--ac-border);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--ac-text-light);
+}
+
+.author__avatar {
+  margin-top: 0 !important;
+}
+
+.page,
+.archive {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.page__inner-wrap {
+  padding-top: 0 !important;
+}
+
+.page__content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#about {
+  display: block;
+  height: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0;
+}
+
+.page__content > *:first-child,
+.page__content > #about,
+.page__content > #about + p,
+.page__content > #about + .ac-motto-banner,
+.page__content > p.lead:first-of-type {
+  margin-top: 0 !important;
+}
+
+.page__inner-wrap header:empty,
+.page__inner-wrap header:not(:has(h1)) {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+.page__title {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Author Motto Styling */
+.author__motto {
+  margin: 0.55rem 0 0.75rem 0;
+  padding: 0.35rem 0.65rem;
+  background: var(--ac-surface);
+  border: 1px dashed var(--ac-border-hover);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: var(--ac-text-muted);
+  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.author__motto:hover {
+  background: var(--ac-primary-light);
+  border-color: var(--ac-primary-border);
+  color: var(--ac-primary);
+}
+
+.motto-icon-sm {
+  font-size: 0.65rem;
+  opacity: 0.6;
+  color: var(--ac-primary);
+}
+
+/* Page Motto Banner (Hero Header) */
+.ac-motto-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.38rem 0.85rem;
+  margin: 0 0 0.85rem 0;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.7) 0%, rgba(248, 250, 252, 0.85) 100%);
+  border-left: 3px solid var(--ac-primary);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--ac-text-main);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .ac-motto-banner {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border-left-color: var(--ac-primary);
+}
+
+.ac-motto-banner .motto-quote-mark {
+  color: var(--ac-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.ac-motto-banner .motto-text {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.ac-motto-banner .motto-author {
+  font-size: 0.8rem;
+  color: var(--ac-text-muted);
+  font-style: normal;
+  margin-left: 4px;
 }
 
 .masthead__menu-item a {
@@ -155,6 +326,29 @@ h1, h2, h3, h4, h5, h6 {
 .masthead__menu-item.selected a {
   color: var(--ac-primary) !important;
   font-weight: 600 !important;
+}
+
+/* Language Toggle Pill */
+.lang-toggle-btn {
+  font-weight: 600 !important;
+  font-size: 0.84rem !important;
+  color: var(--ac-primary) !important;
+  background: var(--ac-primary-light) !important;
+  border: 1px solid var(--ac-primary-border) !important;
+  border-radius: 18px !important;
+  padding: 3px 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.lang-toggle-btn:hover {
+  background: var(--ac-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--ac-primary) !important;
+  transform: translateY(-1px) !important;
 }
 
 /* 3. Author Sidebar Modernization */
@@ -182,6 +376,15 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.18) !important;
 }
 
+@media screen and (max-width: 63.99em) {
+  .author__avatar img,
+  .author__avatar-img {
+    width: 68px !important;
+    height: 68px !important;
+    max-width: 68px !important;
+  }
+}
+
 .author__name {
   font-size: 1.35rem !important;
   font-weight: 700 !important;
@@ -196,18 +399,60 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem !important;
 }
 
-.author__urls.social-icons li a {
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 8px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+/* Sidebar Personal Info Exact Alignment */
+.author__urls.social-icons {
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.author__urls.social-icons li {
+  margin: 0 0 2px 0 !important;
+  padding: 0 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  list-style: none !important;
+}
+
+.author__urls.social-icons li a,
+.author__urls.social-icons li .author__static-item {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 5px 6px !important;
+  margin: 0 !important;
+  border-radius: 6px !important;
+  font-size: 0.88rem !important;
+  line-height: 1.4 !important;
+  color: var(--ac-text-muted) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
 }
 
 .author__urls.social-icons li a:hover {
-  background: var(--ac-primary-light);
+  background: var(--ac-primary-light) !important;
   color: var(--ac-primary) !important;
-  transform: translateX(3px);
+  transform: translateX(3px) !important;
+}
+
+.author__urls.social-icons li i,
+.author__urls.social-icons li .icon-pad-right,
+.author__urls.social-icons li .ai,
+.author__urls.social-icons li .fas,
+.author__urls.social-icons li .fab {
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  height: 20px !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-right: 10px !important;
+  margin-left: 0 !important;
+  padding: 0 !important;
+  font-size: 0.95rem !important;
+  flex-shrink: 0 !important;
 }
 
 /* 4. Research Highlights Cards (Grid) */
