@@ -1,12 +1,83 @@
 {% include base_path %}
 
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
+{% assign pub_id = post.url | slugify %}
+{% if pub_id == "" %}
+  {% assign pub_id = post.title | slugify %}
+{% endif %}
+
+<div class="pub-card" id="card-{{ pub_id }}">
+  <div class="pub-card-header">
+    <a href="{% if post.paperurl %}{{ post.paperurl }}{% else %}{{ base_path }}{{ post.url }}{% endif %}" class="pub-title" target="_blank" rel="noopener noreferrer">
+      {{ post.title }}
+    </a>
+  </div>
+
+  <div class="pub-venue-line">
+    <span class="pub-venue">{{ post.venue }}</span>
+    <span class="pub-year">({{ post.date | default: "1900-01-01" | date: "%Y" }})</span>
+    
+    <!-- Automatic Badges from Citation & Venue -->
+    {% if post.citation contains "CCF-A" or post.venue contains "NeurIPS" %}
+      <span class="pub-badge pub-badge-a">NeurIPS / CCF-A</span>
+    {% endif %}
+    {% if post.citation contains "CCF-B" or post.citation contains "CAS Q2 Top" %}
+      <span class="pub-badge pub-badge-b">CCF-B / CAS Q2 Top</span>
+    {% endif %}
+    {% if post.citation contains "CAS Q1 Top" %}
+      <span class="pub-badge pub-badge-top">CAS Q1 Top</span>
+    {% endif %}
+    {% if post.citation contains "Top Journal" and post.citation contains "Acta" %}
+      <span class="pub-badge pub-badge-top">Top Aeronautical Journal</span>
+    {% endif %}
+    {% if post.citation contains "CCF-C" %}
+      <span class="pub-badge pub-badge-prep">CCF-C</span>
+    {% endif %}
+    {% if post.venue contains "arXiv" %}
+      <span class="pub-badge pub-badge-prep">Preprint</span>
+    {% endif %}
+  </div>
+
+  <div class="pub-authors">
+    {% if post.citation %}
       {{ post.citation }}
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i></a>
-      {% endif %}
-    </li>
-  </article>
+    {% else %}
+      {{ post.content | strip_html | truncatewords: 30 }}
+    {% endif %}
+  </div>
+
+  <div class="pub-actions">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}" class="pub-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-file-pdf"></i> Paper
+      </a>
+    {% endif %}
+    
+    <button class="pub-btn" onclick="toggleBibtex('bib-{{ pub_id }}')">
+      <i class="fas fa-quote-right"></i> BibTeX
+    </button>
+
+    <a href="{{ base_path }}{{ post.url }}" class="pub-btn">
+      <i class="fas fa-circle-info"></i> Details
+    </a>
+
+    {% if post.codeurl %}
+      <a href="{{ post.codeurl }}" class="pub-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> Code
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- Collapsible BibTeX Drawer -->
+  <div id="bib-{{ pub_id }}" class="pub-bibtex-block">
+    <button class="pub-copy-btn" onclick="copyBibtex('bib-{{ pub_id }}', this)">
+      <i class="fas fa-copy"></i> Copy
+    </button>
+    <pre class="pub-bibtex-content">@article{wang{{ post.date | date: "%Y" }}{{ post.title | slice: 0, 5 | downcase | remove: " " }},
+  title     = { {{ post.title }} },
+  author    = { {{ site.author.name }} and colleagues },
+  journal   = { {{ post.venue }} },
+  year      = { {{ post.date | date: "%Y" }} }{% if post.paperurl %},
+  url       = { {{ post.paperurl }} }{% endif %}
+}</pre>
+  </div>
 </div>

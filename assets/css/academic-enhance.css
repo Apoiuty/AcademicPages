@@ -1,0 +1,630 @@
+/* ==========================================================================
+   ACADEMIC PAGES ENHANCED MODERN STYLESHEET
+   Crafted for Elite Academic Portfolios (Zhichao Wang - NUDT)
+   ========================================================================== */
+
+/* Google Fonts Import: Inter & JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --ac-primary: #1d4ed8;
+  --ac-primary-hover: #1e40af;
+  --ac-primary-light: #eff6ff;
+  --ac-primary-border: #bfdbfe;
+  
+  --ac-bg: #ffffff;
+  --ac-surface: #f8fafc;
+  --ac-card-bg: #ffffff;
+  --ac-border: #e2e8f0;
+  --ac-border-hover: #cbd5e1;
+  
+  --ac-text-main: #0f172a;
+  --ac-text-muted: #64748b;
+  --ac-text-light: #94a3b8;
+  
+  --ac-badge-a-bg: #fdf2f8;
+  --ac-badge-a-text: #be185d;
+  --ac-badge-a-border: #fbcfe8;
+  
+  --ac-badge-b-bg: #eff6ff;
+  --ac-badge-b-text: #1d4ed8;
+  --ac-badge-b-border: #bfdbfe;
+  
+  --ac-badge-top-bg: #f0fdf4;
+  --ac-badge-top-text: #15803d;
+  --ac-badge-top-border: #bbf7d0;
+
+  --ac-badge-prep-bg: #fffbeb;
+  --ac-badge-prep-text: #b45309;
+  --ac-badge-prep-border: #fde68a;
+
+  --ac-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --ac-card-shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --ac-radius: 10px;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --ac-primary: #60a5fa;
+  --ac-primary-hover: #93c5fd;
+  --ac-primary-light: rgba(59, 130, 246, 0.15);
+  --ac-primary-border: rgba(96, 165, 250, 0.3);
+  
+  --ac-bg: #0f172a;
+  --ac-surface: #1e293b;
+  --ac-card-bg: #1e293b;
+  --ac-border: #334155;
+  --ac-border-hover: #475569;
+  
+  --ac-text-main: #f1f5f9;
+  --ac-text-muted: #94a3b8;
+  --ac-text-light: #64748b;
+  
+  --ac-badge-a-bg: rgba(190, 24, 93, 0.2);
+  --ac-badge-a-text: #f472b6;
+  --ac-badge-a-border: rgba(244, 114, 182, 0.3);
+  
+  --ac-badge-b-bg: rgba(29, 78, 216, 0.25);
+  --ac-badge-b-text: #93c5fd;
+  --ac-badge-b-border: rgba(147, 197, 253, 0.3);
+  
+  --ac-badge-top-bg: rgba(21, 128, 61, 0.25);
+  --ac-badge-top-text: #86efac;
+  --ac-badge-top-border: rgba(134, 239, 172, 0.3);
+
+  --ac-badge-prep-bg: rgba(180, 83, 9, 0.25);
+  --ac-badge-prep-text: #fde047;
+  --ac-badge-prep-border: rgba(253, 224, 71, 0.3);
+
+  --ac-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --ac-card-shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* 1. Global Typography & Smooth Flow */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  color: var(--ac-text-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--ac-text-main) !important;
+  letter-spacing: -0.02em;
+}
+
+/* Modern Section Headers with Subtle Accent */
+.page__content h2 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.45rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--ac-primary-border) !important;
+}
+
+.page__content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--ac-primary);
+  border-radius: 2px;
+}
+
+/* 2. Glassmorphism Top Navigation */
+.masthead {
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid var(--ac-border) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .masthead {
+  background: rgba(15, 23, 42, 0.88) !important;
+}
+
+.masthead__menu-item a {
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.masthead__menu-item a:hover {
+  background: var(--ac-primary-light) !important;
+  color: var(--ac-primary) !important;
+}
+
+.masthead__menu-item.selected a {
+  color: var(--ac-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* 3. Author Sidebar Modernization */
+.author__avatar img,
+.author__avatar-img {
+  width: 160px !important;
+  height: 160px !important;
+  max-width: 160px !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 50% !important;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.12) !important;
+  border: 3px solid #ffffff !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+[data-theme="dark"] .author__avatar img,
+[data-theme="dark"] .author__avatar-img {
+  border: 3px solid #334155 !important;
+}
+
+.author__avatar img:hover,
+.author__avatar-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.18) !important;
+}
+
+.author__name {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  margin-top: 0.75rem !important;
+  letter-spacing: -0.01em;
+}
+
+.author__bio {
+  font-size: 0.88rem !important;
+  line-height: 1.45 !important;
+  color: var(--ac-text-muted) !important;
+  margin-bottom: 1rem !important;
+}
+
+.author__urls.social-icons li a {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.author__urls.social-icons li a:hover {
+  background: var(--ac-primary-light);
+  color: var(--ac-primary) !important;
+  transform: translateX(3px);
+}
+
+/* 4. Research Highlights Cards (Grid) */
+.ac-research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0 2rem 0;
+}
+
+.ac-research-card {
+  background: var(--ac-card-bg);
+  border: 1px solid var(--ac-border);
+  border-radius: var(--ac-radius);
+  padding: 1.35rem;
+  box-shadow: var(--ac-card-shadow);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ac-research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ac-card-shadow-hover);
+  border-color: var(--ac-primary-border);
+}
+
+.ac-research-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--ac-primary-light);
+  color: var(--ac-primary);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.ac-research-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ac-text-main);
+}
+
+.ac-research-desc {
+  font-size: 0.9rem;
+  color: var(--ac-text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+  flex-grow: 1;
+}
+
+.ac-research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.ac-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--ac-surface);
+  color: var(--ac-text-muted);
+  border: 1px solid var(--ac-border);
+}
+
+/* 5. News Timeline Component */
+.ac-news-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 2rem 0;
+}
+
+.ac-news-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--ac-border);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.ac-news-item:last-child {
+  border-bottom: none;
+}
+
+.ac-news-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ac-primary);
+  background: var(--ac-primary-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  border: 1px solid var(--ac-primary-border);
+}
+
+.ac-news-text {
+  color: var(--ac-text-main);
+}
+
+/* 6. Modern Publication Card Component */
+.pub-card {
+  background: var(--ac-card-bg);
+  border: 1px solid var(--ac-border);
+  border-radius: var(--ac-radius);
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--ac-card-shadow);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.pub-card:hover {
+  border-color: var(--ac-primary-border);
+  box-shadow: var(--ac-card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.pub-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0.4rem;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ac-text-main) !important;
+  text-decoration: none !important;
+  line-height: 1.45;
+  transition: color 0.15s ease;
+}
+
+.pub-title:hover {
+  color: var(--ac-primary) !important;
+}
+
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--ac-text-muted);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.pub-authors b, .pub-authors strong {
+  color: var(--ac-text-main);
+  text-decoration: underline;
+  text-decoration-color: var(--ac-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.pub-venue-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--ac-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.pub-venue {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Publication Badges */
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.pub-badge-a {
+  background: var(--ac-badge-a-bg);
+  color: var(--ac-badge-a-text);
+  border: 1px solid var(--ac-badge-a-border);
+}
+
+.pub-badge-b {
+  background: var(--ac-badge-b-bg);
+  color: var(--ac-badge-b-text);
+  border: 1px solid var(--ac-badge-b-border);
+}
+
+.pub-badge-top {
+  background: var(--ac-badge-top-bg);
+  color: var(--ac-badge-top-text);
+  border: 1px solid var(--ac-badge-top-border);
+}
+
+.pub-badge-prep {
+  background: var(--ac-badge-prep-bg);
+  color: var(--ac-badge-prep-text);
+  border: 1px solid var(--ac-badge-prep-border);
+}
+
+/* Publication Action Buttons */
+.pub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.pub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--ac-surface);
+  color: var(--ac-text-main) !important;
+  border: 1px solid var(--ac-border);
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pub-btn:hover {
+  background: var(--ac-primary-light);
+  color: var(--ac-primary) !important;
+  border-color: var(--ac-primary-border);
+  transform: translateY(-1px);
+}
+
+/* BibTeX Collapsible Drawer */
+.pub-bibtex-block {
+  display: none;
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #0f172a;
+  border-radius: 8px;
+  position: relative;
+}
+
+.pub-bibtex-block.active {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.pub-bibtex-content {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.pub-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pub-copy-btn:hover {
+  background: var(--ac-primary);
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 7. Quick Profile Link Pills in Bio */
+.ac-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 1.2rem 0;
+}
+
+.ac-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: var(--ac-card-bg);
+  border: 1px solid var(--ac-border);
+  color: var(--ac-text-main) !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.ac-pill:hover {
+  background: var(--ac-primary-light);
+  border-color: var(--ac-primary-border);
+  color: var(--ac-primary) !important;
+  transform: translateY(-1px);
+}
+
+/* 8. Education & Awards Timeline */
+.ac-timeline {
+  list-style: none;
+  padding-left: 1.25rem;
+  position: relative;
+  margin: 1rem 0 1.75rem 0;
+}
+
+.ac-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--ac-border);
+}
+
+.ac-timeline-item {
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+
+.ac-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.25rem;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ac-primary);
+  border: 2px solid var(--ac-bg);
+  transform: translateX(-3px);
+}
+
+.ac-timeline-title {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ac-text-main);
+}
+
+.ac-timeline-sub {
+  font-size: 0.88rem;
+  color: var(--ac-text-muted);
+}
+
+/* 9. Back to Top Button */
+#ac-back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ac-primary);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+#ac-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#ac-back-to-top:hover {
+  transform: translateY(-3px);
+  background: var(--ac-primary-hover);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* 10. Responsive Utilities */
+@media (max-width: 768px) {
+  .ac-research-grid {
+    grid-template-columns: 1fr;
+  }
+  .pub-card {
+    padding: 1rem;
+  }
+  .ac-news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

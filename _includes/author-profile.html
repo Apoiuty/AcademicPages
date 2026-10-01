@@ -8,9 +8,13 @@
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    	<img src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high" />
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" 
+           onerror="if(!this.getAttribute('data-err-step')){this.setAttribute('data-err-step','1');this.src='{{ site.baseurl }}/images/{{ author.avatar }}';}else if(this.getAttribute('data-err-step')==='1'){this.setAttribute('data-err-step','2');this.src='/AcademicPages/images/{{ author.avatar }}';}else if(this.getAttribute('data-err-step')==='2'){this.setAttribute('data-err-step','3');this.src='/images/{{ author.avatar }}';}else if(this.getAttribute('data-err-step')==='3'){this.setAttribute('data-err-step','4');this.src='images/{{ author.avatar }}';}"
+           class="author__avatar-img" 
+           alt="{{ author.name }}" 
+           fetchpriority="high" />
     {% endif %}
   </div>
 

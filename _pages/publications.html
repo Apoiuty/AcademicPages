@@ -5,36 +5,20 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<div class="ac-pub-intro" style="margin-bottom: 1.5rem; padding: 1rem 1.25rem; background: var(--ac-surface); border: 1px solid var(--ac-border); border-radius: var(--ac-radius);">
+  <p style="margin: 0; font-size: 0.95rem; color: var(--ac-text-muted); line-height: 1.6;">
+    <i class="fas fa-circle-info" style="color: var(--ac-primary); margin-right: 6px;"></i>
+    Full list of peer-reviewed journal papers, conference proceedings, and preprints. 
+    {% if site.author.googlescholar %}
+      You can also track my citations on <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--ac-primary);">Google Scholar</a>.
+    {% endif %}
+  </p>
+</div>
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    <ul>
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-bibliography.html %}
-    {% endfor %}
-    </ul>
-  {% endfor %}
-{% else %}
-  <ul>
+<div class="pub-list-container">
   {% for post in site.publications reversed %}
     {% include archive-bibliography.html %}
   {% endfor %}
-  </ul>
-{% endif %}
-
-
-
+</div>
