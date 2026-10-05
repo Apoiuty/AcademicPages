@@ -1,0 +1,57 @@
+{% include base_path %}
+
+{% if site.data.douban and site.data.douban.size > 0 %}
+<div class="ac-douban-card">
+  <div class="ac-douban-header">
+    <div class="ac-douban-title">
+      <i class="fas fa-film ac-douban-icon"></i>
+      {% if page.url contains '/zh/' %}
+        <span>豆瓣动态</span>
+      {% else %}
+        <span>Douban Activity</span>
+      {% endif %}
+    </div>
+    <a href="{{ site.author.douban | default: 'https://www.douban.com/people/162112893/' }}" target="_blank" rel="noopener noreferrer" class="ac-douban-link" title="前往豆瓣主页">
+      <span>更多</span>
+      <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+    </a>
+  </div>
+
+  <ul class="ac-douban-list">
+    {% for item in site.data.douban limit:5 %}
+    <li class="ac-douban-item">
+      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="ac-douban-poster-box">
+        {% if item.poster and item.poster != "" %}
+          <img src="{{ item.poster | prepend: "/" | prepend: base_path }}" alt="{{ item.title }}" class="ac-douban-poster" loading="lazy" />
+        {% else %}
+          <i class="fas fa-film" style="color: var(--ac-text-light); font-size: 0.9rem;"></i>
+        {% endif %}
+      </a>
+      <div class="ac-douban-info">
+        <div class="ac-douban-meta">
+          {% if item.action == "看过" or item.action == "读过" or item.action == "听过" %}
+            <span class="ac-douban-action-tag ac-douban-action-watched">{{ item.action }}</span>
+          {% else %}
+            <span class="ac-douban-action-tag ac-douban-action-wish">{{ item.action }}</span>
+          {% endif %}
+          <span class="ac-douban-date">{{ item.short_date }}</span>
+        </div>
+        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="ac-douban-subject-title" title="{{ item.title }}">
+          {{ item.title }}
+        </a>
+        {% if item.stars and item.stars > 0 %}
+        <div class="ac-douban-rating-row" title="{{ item.rating }}">
+          {% for i in (1..item.stars) %}
+            <i class="fas fa-star"></i>
+          {% endfor %}
+          {% if item.rating %}
+            <span class="ac-douban-rating-text">{{ item.rating }}</span>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

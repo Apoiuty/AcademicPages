@@ -1,0 +1,34 @@
+name: Sync Douban Activities
+
+on:
+  schedule:
+    # Run every day at 00:00 UTC (08:00 CST)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Fetch Douban feed and download posters
+        run: |
+          python scripts/fetch_douban.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/douban.json images/douban/
+          git commit -m "chore: 🎬 update recent Douban activities [skip ci]" || echo "No changes to commit"
+          git push
