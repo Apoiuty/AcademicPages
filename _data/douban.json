@@ -1,5 +1,33 @@
 [
   {
+    "title": "求救信号",
+    "raw_title": "想看求救信号",
+    "action": "想看",
+    "link": "https://movie.douban.com/subject/36439868/",
+    "subject_id": "36439868",
+    "media_type": "movie",
+    "rating": "",
+    "stars": 0,
+    "poster": "images/douban/36439868.jpg",
+    "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2935448686.jpg",
+    "date": "2026-10-07",
+    "short_date": "10-07"
+  },
+  {
+    "title": "很便宜，千里马超市",
+    "raw_title": "想看很便宜，千里马超市",
+    "action": "想看",
+    "link": "https://movie.douban.com/subject/33457604/",
+    "subject_id": "33457604",
+    "media_type": "movie",
+    "rating": "",
+    "stars": 0,
+    "poster": "images/douban/33457604.jpg",
+    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2566924013.jpg",
+    "date": "2026-10-07",
+    "short_date": "10-07"
+  },
+  {
     "title": "南巫",
     "raw_title": "看过南巫",
     "action": "看过",
@@ -110,33 +138,5 @@
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2933638302.jpg",
     "date": "2026-09-19",
     "short_date": "09-19"
-  },
-  {
-    "title": "目中无人2",
-    "raw_title": "看过目中无人2",
-    "action": "看过",
-    "link": "https://movie.douban.com/subject/36212386/",
-    "subject_id": "36212386",
-    "media_type": "movie",
-    "rating": "力荐",
-    "stars": 5,
-    "poster": "images/douban/36212386.jpg",
-    "poster_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2904299381.jpg",
-    "date": "2026-08-29",
-    "short_date": "08-29"
-  },
-  {
-    "title": "东京出租车",
-    "raw_title": "想看东京出租车",
-    "action": "想看",
-    "link": "https://movie.douban.com/subject/37213104/",
-    "subject_id": "37213104",
-    "media_type": "movie",
-    "rating": "",
-    "stars": 0,
-    "poster": "images/douban/37213104.jpg",
-    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924658739.jpg",
-    "date": "2026-08-28",
-    "short_date": "08-28"
   }
 ]
