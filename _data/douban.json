@@ -1,5 +1,19 @@
 [
   {
+    "title": "生化危机：爆发夜",
+    "raw_title": "看过生化危机：爆发夜",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/37068446/",
+    "subject_id": "37068446",
+    "media_type": "movie",
+    "rating": "推荐",
+    "stars": 4,
+    "poster": "images/douban/37068446.jpg",
+    "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2936442666.jpg",
+    "date": "2026-10-10",
+    "short_date": "10-10"
+  },
+  {
     "title": "求救信号",
     "raw_title": "想看求救信号",
     "action": "想看",
@@ -124,19 +138,5 @@
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925804842.jpg",
     "date": "2026-09-25",
     "short_date": "09-25"
-  },
-  {
-    "title": "特立独行",
-    "raw_title": "看过特立独行",
-    "action": "看过",
-    "link": "https://movie.douban.com/subject/36953973/",
-    "subject_id": "36953973",
-    "media_type": "movie",
-    "rating": "还行",
-    "stars": 3,
-    "poster": "images/douban/36953973.jpg",
-    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2933638302.jpg",
-    "date": "2026-09-19",
-    "short_date": "09-19"
   }
 ]
