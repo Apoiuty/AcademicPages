@@ -1,5 +1,19 @@
 [
   {
+    "title": "潜伏6",
+    "raw_title": "看过潜伏6",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/37525017/",
+    "subject_id": "37525017",
+    "media_type": "movie",
+    "rating": "力荐",
+    "stars": 5,
+    "poster": "images/douban/37525017.jpg",
+    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2931576822.jpg",
+    "date": "2026-10-14",
+    "short_date": "10-14"
+  },
+  {
     "title": "生化危机：爆发夜",
     "raw_title": "看过生化危机：爆发夜",
     "action": "看过",
@@ -124,19 +138,5 @@
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2935294362.jpg",
     "date": "2026-09-26",
     "short_date": "09-26"
-  },
-  {
-    "title": "大濛",
-    "raw_title": "看过大濛",
-    "action": "看过",
-    "link": "https://movie.douban.com/subject/36680492/",
-    "subject_id": "36680492",
-    "media_type": "movie",
-    "rating": "力荐",
-    "stars": 5,
-    "poster": "images/douban/36680492.jpg",
-    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925804842.jpg",
-    "date": "2026-09-25",
-    "short_date": "09-25"
   }
 ]
