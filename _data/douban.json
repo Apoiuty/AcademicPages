@@ -1,5 +1,19 @@
 [
   {
+    "title": "逃出布迪秀",
+    "raw_title": "看过逃出布迪秀",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/37446297/",
+    "subject_id": "37446297",
+    "media_type": "movie",
+    "rating": "推荐",
+    "stars": 4,
+    "poster": "images/douban/37446297.jpg",
+    "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2936309806.jpg",
+    "date": "2026-10-18",
+    "short_date": "10-18"
+  },
+  {
     "title": "潜伏6",
     "raw_title": "看过潜伏6",
     "action": "看过",
@@ -124,19 +138,5 @@
     "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2654205515.jpg",
     "date": "2026-09-27",
     "short_date": "09-27"
-  },
-  {
-    "title": "罗斯",
-    "raw_title": "想看罗斯",
-    "action": "想看",
-    "link": "https://movie.douban.com/subject/35322132/",
-    "subject_id": "35322132",
-    "media_type": "movie",
-    "rating": "",
-    "stars": 0,
-    "poster": "images/douban/35322132.jpg",
-    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2935294362.jpg",
-    "date": "2026-09-26",
-    "short_date": "09-26"
   }
 ]
