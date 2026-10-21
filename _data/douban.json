@@ -1,5 +1,19 @@
 [
   {
+    "title": "坠落2：死点",
+    "raw_title": "看过坠落2：死点",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/36318704/",
+    "subject_id": "36318704",
+    "media_type": "movie",
+    "rating": "较差",
+    "stars": 2,
+    "poster": "images/douban/36318704.jpg",
+    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2935283013.jpg",
+    "date": "2026-10-20",
+    "short_date": "10-20"
+  },
+  {
     "title": "逃出布迪秀",
     "raw_title": "看过逃出布迪秀",
     "action": "看过",
@@ -124,19 +138,5 @@
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1150103462.jpg",
     "date": "2026-09-28",
     "short_date": "09-28"
-  },
-  {
-    "title": "怪奇宅",
-    "raw_title": "看过怪奇宅",
-    "action": "看过",
-    "link": "https://movie.douban.com/subject/35477218/",
-    "subject_id": "35477218",
-    "media_type": "movie",
-    "rating": "力荐",
-    "stars": 5,
-    "poster": "images/douban/35477218.jpg",
-    "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2654205515.jpg",
-    "date": "2026-09-27",
-    "short_date": "09-27"
   }
 ]
