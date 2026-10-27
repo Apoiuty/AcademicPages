@@ -1,5 +1,19 @@
 [
   {
+    "title": "幻视任务",
+    "raw_title": "看过幻视任务",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/36137784/",
+    "subject_id": "36137784",
+    "media_type": "movie",
+    "rating": "力荐",
+    "stars": 5,
+    "poster": "images/douban/36137784.jpg",
+    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2934961457.jpg",
+    "date": "2026-10-26",
+    "short_date": "10-26"
+  },
+  {
     "title": "坠落2：死点",
     "raw_title": "看过坠落2：死点",
     "action": "看过",
@@ -122,20 +136,6 @@
     "stars": 5,
     "poster": "images/douban/1292659.jpg",
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2173855883.jpg",
-    "date": "2026-09-28",
-    "short_date": "09-28"
-  },
-  {
-    "title": "追随",
-    "raw_title": "看过追随",
-    "action": "看过",
-    "link": "https://movie.douban.com/subject/1397546/",
-    "subject_id": "1397546",
-    "media_type": "movie",
-    "rating": "力荐",
-    "stars": 5,
-    "poster": "images/douban/1397546.jpg",
-    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1150103462.jpg",
     "date": "2026-09-28",
     "short_date": "09-28"
   }
