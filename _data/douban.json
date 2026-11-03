@@ -1,5 +1,19 @@
 [
   {
+    "title": "荧屏在发光",
+    "raw_title": "看过荧屏在发光",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/35700145/",
+    "subject_id": "35700145",
+    "media_type": "movie",
+    "rating": "很差",
+    "stars": 1,
+    "poster": "images/douban/35700145.jpg",
+    "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2905033896.jpg",
+    "date": "2026-11-02",
+    "short_date": "11-02"
+  },
+  {
     "title": "幻视任务",
     "raw_title": "看过幻视任务",
     "action": "看过",
@@ -124,19 +138,5 @@
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2931049468.jpg",
     "date": "2026-10-02",
     "short_date": "10-02"
-  },
-  {
-    "title": "变脸",
-    "raw_title": "看过变脸",
-    "action": "看过",
-    "link": "https://movie.douban.com/subject/1292659/",
-    "subject_id": "1292659",
-    "media_type": "movie",
-    "rating": "力荐",
-    "stars": 5,
-    "poster": "images/douban/1292659.jpg",
-    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2173855883.jpg",
-    "date": "2026-09-28",
-    "short_date": "09-28"
   }
 ]
