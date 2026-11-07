@@ -1,5 +1,19 @@
 [
   {
+    "title": "地下墓穴",
+    "raw_title": "看过地下墓穴",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/25821124/",
+    "subject_id": "25821124",
+    "media_type": "movie",
+    "rating": "推荐",
+    "stars": 4,
+    "poster": "images/douban/25821124.jpg",
+    "poster_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2197368321.jpg",
+    "date": "2026-11-05",
+    "short_date": "11-05"
+  },
+  {
     "title": "世界奇妙物语 2022夏季特别篇",
     "raw_title": "看过世界奇妙物语 2022夏季特别篇",
     "action": "看过",
@@ -10,20 +24,6 @@
     "stars": 4,
     "poster": "images/douban/35914301.jpg",
     "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2874961067.jpg",
-    "date": "2026-11-04",
-    "short_date": "11-04"
-  },
-  {
-    "title": "地下墓穴",
-    "raw_title": "想看地下墓穴",
-    "action": "想看",
-    "link": "https://movie.douban.com/subject/25821124/",
-    "subject_id": "25821124",
-    "media_type": "movie",
-    "rating": "",
-    "stars": 0,
-    "poster": "images/douban/25821124.jpg",
-    "poster_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2197368321.jpg",
     "date": "2026-11-04",
     "short_date": "11-04"
   },
