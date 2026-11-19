@@ -1,5 +1,19 @@
 [
   {
+    "title": "圣人莫德",
+    "raw_title": "看过圣人莫德",
+    "action": "看过",
+    "link": "https://movie.douban.com/subject/34805216/",
+    "subject_id": "34805216",
+    "media_type": "movie",
+    "rating": "力荐",
+    "stars": 5,
+    "poster": "images/douban/34805216.jpg",
+    "poster_url": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2587271360.jpg",
+    "date": "2026-11-18",
+    "short_date": "11-18"
+  },
+  {
     "title": "咖啡桌",
     "raw_title": "看过咖啡桌",
     "action": "看过",
@@ -122,20 +136,6 @@
     "stars": 0,
     "poster": "images/douban/3095514.jpg",
     "poster_url": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2532759044.jpg",
-    "date": "2026-11-04",
-    "short_date": "11-04"
-  },
-  {
-    "title": "灵异咒",
-    "raw_title": "想看灵异咒",
-    "action": "想看",
-    "link": "https://movie.douban.com/subject/1979068/",
-    "subject_id": "1979068",
-    "media_type": "movie",
-    "rating": "",
-    "stars": 0,
-    "poster": "images/douban/1979068.jpg",
-    "poster_url": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2547316981.jpg",
     "date": "2026-11-04",
     "short_date": "11-04"
   }
